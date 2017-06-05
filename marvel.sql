@@ -50,3 +50,33 @@ INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Age of Ultron', 2
 INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '19:15');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '12:35');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '21:30');
+
+SELECT * FROM movies;
+
+SELECT name FROM people;
+
+SELECT id FROM people WHERE name = 'Jasmse Cox';
+UPDATE people SET name = 'James Cox' WHERE id = 3;
+SELECT name FROM people WHERE id = 3;
+
+SELECT name FROM people WHERE name = 'Finn Porter';
+
+DELETE FROM movies WHERE title = 'Batman Begins';
+SELECT title FROM movies;
+
+INSERT INTO people (name) VALUES ('Zsolt Podoba-Szalai');
+SELECT name FROM people WHERE name = 'Zsolt Podoba-Szalai';
+
+DELETE FROM people WHERE name = 'Winston Ingram';
+SELECT name FROM people;
+
+SELECT id FROM people WHERE name = 'Fred';
+UPDATE people SET name = 'Jack Jarvis' WHERE id = 9;
+UPDATE people SET name = 'Victor McDade' WHERE id = 13;
+SELECT name FROM people WHERE id IN(9,13);
+
+INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '24:00');
+SELECT title FROM movies;
+
+UPDATE movies SET show_time = '21:30' WHERE title = 'Guardians of the Galaxy';
+SELECT show_time FROM movies WHERE title = 'Guardians of the Galaxy';
